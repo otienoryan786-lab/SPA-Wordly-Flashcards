@@ -1,0 +1,42 @@
+.learn-nav { background: linear-gradient(135deg, #0f766e, #16a34a); }
+
+.page-intro { padding: 1rem 0 0.5rem; }
+
+.nav-pills .nav-link { color: var(--bs-body-color); }
+.nav-pills .nav-link.active { color: #fff; background-color: #15803d; }
+
+.form-control:focus { border-color: #16a34a; box-shadow: 0 0 0 0.25rem rgba(22, 163, 74, 0.2); }
+
+#result .card { border-radius: 1rem; }
+#result ol { line-height: 1.6; }
+#result a { overflow-wrap: anywhere; }
+
+.progress { height: 0.65rem; }
+
+/* Flip card for the Practice tab */
+.flip { perspective: 1000px; max-width: 460px; margin: 0 auto; cursor: pointer; }
+.flip-inner { position: relative; min-height: 240px; transition: transform 0.6s; transform-style: preserve-3d; }
+.flip.flipped .flip-inner { transform: rotateY(180deg); }
+.flip-face {
+  position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 1.5rem; text-align: center; border-radius: 1rem; backface-visibility: hidden;
+  background: var(--bs-body-bg); border: 2px solid var(--bs-success); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+.flip-back { transform: rotateY(180deg); background: var(--bs-success-bg-subtle); }
+.flip-word { font-size: 2.4rem; font-weight: 800; }
+
+/* Saved words are highlighted with the <mark> element */
+mark { background: #fde047; color: #111; padding: 0 0.25rem; border-radius: 0.25rem; }
+[data-bs-theme="dark"] mark { background: #a16207; color: #fff; }
+
+.card-hover { transition: transform 0.15s, box-shadow 0.15s; }
+.card-hover:hover { transform: translateY(-3px); box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.12); }
+
+@media (prefers-reduced-motion: reduce) { .flip-inner, .card-hover { transition: none; } }
+
+@media (max-width: 575.98px) {
+  .input-group-lg > .form-control,
+  .input-group-lg > .btn { font-size: 1rem; }
+  .input-group-lg > .btn { padding-inline: 1rem !important; }
+  .flip-word { font-size: 2rem; }
+}
